@@ -1,0 +1,19 @@
+
+
+<div *ngIf="details!=undefined" class="container">
+    <div class="items">
+        <div class="child">
+    <div><b>Product name:</b> {{details.details.Name}}</div>
+    <br>
+    <div><b>Price:</b> {{ details.details.Price }}$</div>
+    <br>
+    <img class="img" src ={{details.details.Url}}/>
+
+</div>
+
+</div>
+
+<button class="btn btn-info btn-sm" (click)="AddToCart(details.details)">Buy</button>
+
+</div>
+

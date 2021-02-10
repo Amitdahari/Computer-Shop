@@ -1,0 +1,41 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+
+	<h1>Shopping Cart</h1><hr>
+	<table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <th>Item Name</th>
+                <th>Category</th>
+                <th>Image</th>
+                <th>Unit Price</th>
+            </tr>
+            
+                
+            
+            <tr *ngFor="let product of productInCart">
+                <td>{{ product.Name }}</td>
+                <td>{{ product.CategoryId }}</td>
+                <td>
+                    <img width="100px" height="100px" src={{product.Url}}/>
+                    
+                </td>
+                <td>{{product.Price}}$</td>
+            </tr>
+
+            <tr>
+                <th colspan="3"><span class="pull-right">Total</span></th>
+                <th>{{total}}$</th>
+            </tr>
+            <tr>
+                <td><a href="#" class="btn btn-primary" (click)="BackToCase()">Continue Shopping</a></td>
+                <td colspan="3"><a href="#" class="pull-right btn btn-success" (click)="CheckOut()">Checkout</a></td>
+            </tr>
+        </tbody>
+    </table>          
+      
+</div>

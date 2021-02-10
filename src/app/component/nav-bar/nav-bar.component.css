@@ -1,0 +1,14 @@
+.nav{
+    align-items: center;
+    justify-content: center;
+    display: flex; 
+}
+.button{
+    border-radius: 90%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 10px;
+    color:red;
+    background-color: bisque;
+    font-size: xx-large;
+    
+}
