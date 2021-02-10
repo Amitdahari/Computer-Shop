@@ -1,0 +1,34 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<!-- col-sm-6 col-md-4 col-lg-3 mt-4 -->
+<div class="a">
+<div class="b" *ngFor="let product of products">
+<div class=" col-sm-6 col-md-4 col-lg-3 mt-4">
+    <div class="card card-inverse card-info">
+        <img class="card-img-top" src={{product.Url}}>
+        <div class="card-block">
+            <figure class="profile profile-inline">
+                <img src="https://www.ivory.co.il/files/catalog/org/1603011178A78LL.jpg" class="profile-avatar" alt="">
+            </figure>
+            <h4 class="card-title">{{product.Name}}</h4>
+            <div class="card-text">
+                Check
+            </div>
+
+            <div class="card-text">
+                {{product.Price}}$
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <button class="btn btn-info btn-sm">Buy</button>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-info btn-sm">Details {{ product.Details }}</button>
+        </div>
+    </div>
+</div>
+</div>
+</div>
